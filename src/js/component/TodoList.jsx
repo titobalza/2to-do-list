@@ -41,6 +41,9 @@ function TodoList() {
   return (
     <div>
         <h1 className='display-6 pb-2'> The #1 Task Management Tool </h1>
+        {todos.length <= 0 && "There are no todos  "}
+        {todos.length>0 && <div>there are {todos.length} tasks</div>}
+	  
         <TodoForm onSubmit={addTodo}/>   
         <Todo
         todos={todos}
